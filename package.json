@@ -1,0 +1,10 @@
+{
+    "name": "pascetti.css",
+    "version": "1.0.0",
+    "main": "stylesheets/main.scss",
+    "author": "Matteo Kofler",
+    "license": "MIT",
+    "dependencies": {
+        "node-sass": "^6.0.1"
+    }
+}

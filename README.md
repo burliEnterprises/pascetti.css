@@ -31,3 +31,8 @@ npm install -g node-sass
 ```bash
 node-sass stylesheets/main.scss dist/main.css
 ```
+
+### Resources
+
+https://levelup.gitconnected.com/bundle-a-css-library-6e9ff1ff8a2c
+https://geekyants.com/blog/building-your-own-css-framework-373
