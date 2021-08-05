@@ -4,14 +4,11 @@
 
 /// @type Color
 $theme-colors: (
-  'default-blue': #0071ce,
-  'blue': #064f8e,
-  'yellow': #f79428,
-  'light-blue': #1888c8,
-  'green': #54a546,
-  'red': #C82022,
-  'pink': #b51e6d,
-  'orange': #e54e26
+  "primary": #264653,
+  "secondary": #2A9D8F,
+  "yellow": #E9C46A,
+  "orange": #F4A261,
+  "red": #E76F51
 );
 
 $max-width: 1200px;
@@ -24,6 +21,8 @@ $breakpoints: (
    "lg": 992px,
    "xl": 1200px
 );
+
+
 
 
 /*

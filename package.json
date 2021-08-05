@@ -6,5 +6,8 @@
     "license": "MIT",
     "dependencies": {
         "node-sass": "^6.0.1"
+    },
+    "scripts": {
+        "autocompile-scss": "node-sass --watch stylesheets/main.scss -o dist"
     }
 }

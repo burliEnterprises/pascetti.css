@@ -36,7 +36,8 @@ a {
 */
 
 // https://geekyants.com/blog/building-your-own-css-framework-373
-.container{
+.container{        
+  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -47,6 +48,7 @@ a {
 }
 
 .row{
+  padding: 0.5rem 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -60,16 +62,16 @@ a {
       @for $i from 1 through $no-of-columns {
           .col-#{$breakpoint}-#{$i} {
               width: (100% / ($no-of-columns / $i));
+              padding: 0 0.5rem;
           }
       }
   }
 }
 
-@media only screen and (max-width: map-get($breakpoints, "sm")) {
-  // RESPONSIVE COLUMN CODE .....
-  @for $i from 1 through $no-of-columns {
-      .col-#{$i} {
-          width: (100% /  ( $no-of-columns / $i))  ;  
-      }
-  }
+// RESPONSIVE COLUMN CODE .....
+@for $i from 1 through $no-of-columns {
+    .col-#{$i} {
+        width: (100% /  ( $no-of-columns / $i))  ;  
+        padding: 0 0.5rem;
+    }
 }
