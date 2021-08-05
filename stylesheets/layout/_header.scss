@@ -1,3 +1,27 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+/** NAVIGATION BAR */
+nav {
+    overflow: hidden;
+    background: map-get($theme-colors, "primary");
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    ul {
+      list-style-type: none;
+      li {
+        display: inline;
+        a {
+            color: white;
+            list-style-type: none;
+            text-decoration: none;
+            @include on-event{
+               color: darken(white, 10%); 
+            };
+        }
+      }
+    }
+  }

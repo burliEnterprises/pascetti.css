@@ -24,16 +24,19 @@ html {
 /**
  * Basic styles for links
  */
- /*
+ 
 a {
-  color:$theme-colors("default-blue");
+  $color: map-get($theme-colors, "primary");
+  color: $color;
   text-decoration: none;
   @include on-event {
-    color: $theme-colors("default-blue");
-    text-decoration: underline;
+    color: darken($color, 10%);
+    
+    list-style-type: none;
+    text-decoration: none;
   }
 }
-*/
+
 
 // https://geekyants.com/blog/building-your-own-css-framework-373
 .container{        
@@ -74,4 +77,11 @@ a {
         width: (100% /  ( $no-of-columns / $i))  ;  
         padding: 0 0.5rem;
     }
+}
+
+
+pre{
+  border: 2px solid map-get($theme-colors, "primary");
+  width: 100%;
+  padding: 1em;
 }

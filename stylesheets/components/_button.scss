@@ -3,15 +3,18 @@
 // -----------------------------------------------------------------------------
 .btn{
     display: inline-block;
-    font-weight: 400;
-    font-size: 1rem;
     line-height: 1.5;
     border-radius: .25rem;
     border: none;
-    padding: .375rem .75rem;
     text-decoration: none;
     color: map-get($theme-colors, "primary");
     transition: 0.3s;
+    padding: .5rem 1.5rem;
+	border-width: .2rem;
+	border-style: solid;
+	font-size: 0.9rem;
+	font-weight: 500;
+	cursor: pointer;
     @include on-event{
         cursor: pointer;
     }  
