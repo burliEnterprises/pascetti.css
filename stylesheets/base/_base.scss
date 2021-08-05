@@ -24,12 +24,52 @@ html {
 /**
  * Basic styles for links
  */
+ /*
 a {
-  color: $brand-color;
+  color:$theme-colors("default-blue");
   text-decoration: none;
-
   @include on-event {
-    color: $text-color;
+    color: $theme-colors("default-blue");
     text-decoration: underline;
+  }
+}
+*/
+
+// https://geekyants.com/blog/building-your-own-css-framework-373
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0px auto;
+  &:not(.fluid){
+    max-width: $max-width;
+  }
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;  
+}
+
+@each $breakpoint,$value in $breakpoints {
+  // MEDIA QUERY
+  @media only screen and (min-width: $value) {
+      // RESPONSIVE COLUMN CODE .....
+      @for $i from 1 through $no-of-columns {
+          .col-#{$breakpoint}-#{$i} {
+              width: (100% / ($no-of-columns / $i));
+          }
+      }
+  }
+}
+
+@media only screen and (max-width: map-get($breakpoints, "sm")) {
+  // RESPONSIVE COLUMN CODE .....
+  @for $i from 1 through $no-of-columns {
+      .col-#{$i} {
+          width: (100% /  ( $no-of-columns / $i))  ;  
+      }
   }
 }
